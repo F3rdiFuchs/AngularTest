@@ -4,5 +4,8 @@
     <exclude-output />
     <content url="file://$MODULE_DIR$" />
     <orderEntry type="sourceFolder" forTests="false" />
+    <orderEntry type="library" name="angular.js" level="project" />
+    <orderEntry type="library" name="Angular.min.js" level="project" />
+    <orderEntry type="library" name="angular-route.js" level="project" />
   </component>
 </module>

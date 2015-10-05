@@ -1,0 +1,18 @@
+<div class="jumbotron">
+    <table class="table" ng-controller="WetterCtrl">
+        <tr>
+            <td>Id</td>
+            <td>Stadt</td>
+            <td>Wind</td>
+            <td>Temp</td>
+            <td>pressure</td>
+        </tr>
+        <tr>
+            <td>{{wetter.id}}</td>
+            <td>{{wetter.name}}</td>
+            <td>{{wetter.wind.speed}}</td>
+            <td>{{wetter.main.temp}}</td>
+            <td>{{wetter.main.pressure}}</td>
+        </tr>
+    </table>
+</div>
