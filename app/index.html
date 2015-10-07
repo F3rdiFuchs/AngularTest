@@ -1,20 +1,35 @@
-<html ng-app="tutorialApp">
+<html ng-app="TestSite">
 <head>
     <meta charset="utf8" />
-    <title>AngularJS Tutorial</title>
+    <title>There is none...</title>
     <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
 </head>
 <body>
+<nav class="navbar navbar-default navbar-top">
+    <div class="container">
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav">
+                <li><a href="#/">Home</a></li>
+                <li><a href="#/data/">Data</a></li>
+                <li><a href="#/wetter/">Wetter</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
 <div class="container">
-
-    <p class="well">
-        <a href="#/">Start</a> | <a href="#/about">Über</a> | <a href="#/kontakt">Kontakt</a> | <a href="#/wetter">Wetter</a>
-    </p>
     <div ng-view></div>
-
 </div>
+
+<!-- Angular -->
 <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.0/angular.js"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.0/angular-route.js"></script>
-<script src="app.js"></script>
+
+<!-- Modules -->
+<script src="js/app.js"></script>
+<!-- Controllers -->
+<script src="js/controllers/HomeController.js"></script>
+<script src="js/controllers/WetterController.js"></script>
+<!-- Services -->
+<script src="js/services/WetterService.js"></script>
 </body>
 </html>
