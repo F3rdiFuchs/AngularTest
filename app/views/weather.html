@@ -13,7 +13,7 @@
                 </thead>
                 <tbody>
                     <tr>
-                        <td ng-repeat="akt in weatherEf.weather"><img src="img/{{akt.icon}}.png"> </td>
+                        <td><div ng-repeat="akt in weatherEf.weather"><img src="img/{{akt.icon}}.png"> </div></td>
                         <td>{{weatherEf.main.temp}}</td>
                         <td>{{weatherEf.main.pressure}}</td>
                         <td>{{weatherEf.main.humidity}}</td>
@@ -37,7 +37,7 @@
                     </div>
             </form>
             <br>
-            <div ng-show="cityWetter">
+            <div ng-show="weatherS">
                 <table class="table">
                     <thead>
                     <tr>
@@ -51,12 +51,12 @@
                     </thead>
                     <tbody>
                     <tr>
-                        <td ng-repeat="akt in wetter2.weather"><img src="img/{{akt.icon}}.png"> </td>
-                        <td>{{wetter2.main.temp}}</td>
-                        <td>{{wetter2.main.pressure}}</td>
-                        <td>{{wetter2.main.humidity}}</td>
-                        <td>{{wetter2.wind.speed}}</td>
-                        <td>{{wetter2.name}}</td>
+                        <td><div ng-repeat="akt in weatherS.weather"><img src="img/{{akt.icon}}.png"></div> </td>
+                        <td>{{weatherS.main.temp}}</td>
+                        <td>{{weatherS.main.pressure}}</td>
+                        <td>{{weatherS.main.humidity}}</td>
+                        <td>{{weatherS.wind.speed}}</td>
+                        <td>{{weatherS.name}}</td>
                     </tr>
                     </tbody>
                 </table>
