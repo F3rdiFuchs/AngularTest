@@ -15,7 +15,7 @@ app.controller('WeatherController', ['$scope', 'weatherFactory', function($scope
 
     }
     function getWeatherErfurt() {
-        var city = 'erfurt';
+
         weatherFactory.getCityWeather('erfurt')
             .success(function(city){
             $scope.weatherEf = city;

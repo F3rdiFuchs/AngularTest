@@ -13,7 +13,7 @@
                 </thead>
                 <tbody>
                     <tr>
-                        <td><div ng-repeat="akt in weatherEf.weather"><img src="img/{{akt.icon}}.png"> </div></td>
+                        <td><div ng-repeat="akt in weatherEf.weather"><img src="img/weather/{{akt.icon}}.png"> </div></td>
                         <td>{{weatherEf.main.temp}}</td>
                         <td>{{weatherEf.main.pressure}}</td>
                         <td>{{weatherEf.main.humidity}}</td>
@@ -51,7 +51,7 @@
                     </thead>
                     <tbody>
                     <tr>
-                        <td><div ng-repeat="akt in weatherS.weather"><img src="img/{{akt.icon}}.png"></div> </td>
+                        <td><div ng-repeat="akt in weatherS.weather"><img src="img/weather/{{akt.icon}}.png"></div> </td>
                         <td>{{weatherS.main.temp}}</td>
                         <td>{{weatherS.main.pressure}}</td>
                         <td>{{weatherS.main.humidity}}</td>
