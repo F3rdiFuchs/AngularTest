@@ -1,4 +1,4 @@
-app.controller('HomeController', ['$scope',
+app.controller('HomeCtrl', ['$scope',
     function($scope) {
         $scope.title = "Startseite";
 

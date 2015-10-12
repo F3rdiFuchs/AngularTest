@@ -1,4 +1,4 @@
-app.controller('DataController', ['$scope',
+app.controller('DataCtrl', ['$scope',
     function($scope) {
         $scope.downloads = [
             {

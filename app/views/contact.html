@@ -1,5 +1,67 @@
-<div class="panel panel-default">
-    <div class="panel-body">
-        <h1>Sende uns eine Mail (eine und nicht zwei!):</h1>
+<div ng-controller="FormularCtrl">
+    <div class="panel panel-default">
+        <div class="panel-body">
+            <h1>Sende uns eine Mail (eine und nicht zwei!):</h1>
+            <br>
+
+        <br>
+            <form class="form-horizontal">
+                <fieldset>
+                    <legend>Ich will:
+                        <div class="step">
+                            <a href="#/contact" ng-click="setState('A')">"Danke sagen"</a> |
+                            <a href="#/contact" ng-click="setState('B')"> mich beschweren </a> |
+                            <a href="#/contact" ng-click="setState('C')"> etwas schreiben </a> |
+                            <a href="#/contact" ng-click="setState('D')"> oder einfach nur nerfen</a>
+                        </div></legend>
+                        <div class="form-group">
+                    <label class="col-md-4 control-label" for="txtname">Vorname:</label>
+                    <div class="col-md-4">
+                        <input id="txtname" name="txtname" placeholder="" class="form-control input-md" required="" type="text">
+
+                    </div>
+                </div>
+                    <div class="form-group">
+                        <label class="col-md-4 control-label" for="txtmail">E-Mail:</label>
+                        <div class="col-md-4">
+                            <input id="txtmail" name="txtmail" placeholder="placeholder" class="form-control input-md" required="" type="text">
+
+                        </div>
+                    </div>
+                    <!-- Danke -->
+                    <div ng-switch="state">
+                <div class ="step" ng-switch-when="A">
+                    <div class="form-group">
+                        <label class="col-md-4 control-label" for="selectbasic">Danke Auswahl:</label>
+                        <div class="col-md-4">
+                            <select id="selectbasic" name="selectbasic" class="form-control">
+                                <option value="1">Danke</option>
+                                <option value="2">Sehr Danke</option>
+                                <option value="3">Vielen Dank</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-md-4 control-label" for="singlebutton"></label>
+                        <div class="col-md-4">
+                            <button id="singlebutton" name="singlebutton" class="btn btn-primary">Senden</button>
+                        </div>
+                    </div>
+                </div>
+                        <!-- Beschwerde-->
+                <div class ="step" ng-switch-when="B">
+                    <label class="col-md-4 control-label">Dieser Vorgang ist im Moment nicht m&ouml;glich</label>
+                </div>
+                <div class ="step" ng-switch-when="C">
+                    <div>Gerne</div>
+                </div>
+                <div class ="step" ng-switch-when="D">
+                    <div>Schreiben Sie</div>
+                </div>
+            </div>
+
+                    </fieldset>
+                </form>
+        </div>
     </div>
 </div>

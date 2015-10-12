@@ -1,4 +1,4 @@
-app.controller('WeatherController', ['$scope', 'weatherFactory', function($scope, weatherFactory) {
+app.controller('WeatherCtrl', ['$scope', 'weatherFactory', function($scope, weatherFactory) {
 
     $scope.weatherEf;
     getWeatherErfurt();
