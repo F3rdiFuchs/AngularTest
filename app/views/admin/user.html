@@ -1,4 +1,4 @@
-<div ng-controller="UserCtrl">
+<div ng-controller="UserTabCtrl">
     <div class="panel panel-default">
         <div class="panel-body">
             <h1>Benutzerverwaltung:</h1>
@@ -10,14 +10,14 @@
             </legend>
             <div ng-switch="userSite">
                 <div class ="step" ng-switch-when="B">
-                    <form class="form-horizontal"  ng-controller="UserInputCtrl" ng-submit="saveUser()">
+                    <form class="form-horizontal" ng-submit="saveUser()">
                         <fieldset>
 
                         <!-- Text input-->
                         <div class="form-group">
                             <label class="col-md-4 control-label" for="username">Username:</label>
                             <div class="col-md-4">
-                                <input id="username" ng-model="user.username" name="username" placeholder="" class="form-control input-md" required="" type="text">
+                                <input id="userName" ng-model="user.userName" ng-maxlength="15" name="username" placeholder="" class="form-control input-md" required="" type="text">
 
                             </div>
                         </div>
@@ -26,7 +26,7 @@
                         <div class="form-group">
                             <label class="col-md-4 control-label" for="name">Vorname:</label>
                             <div class="col-md-4">
-                                <input id="name" ng-model="user.name" name="name" placeholder="" class="form-control input-md" required="" type="text">
+                                <input id="name" ng-model="user.name" ng-maxlength="15" name="name" placeholder="" class="form-control input-md" required="" type="text">
 
                             </div>
                         </div>
@@ -35,7 +35,7 @@
                         <div class="form-group">
                             <label class="col-md-4 control-label" for="lastname">Nachname:</label>
                             <div class="col-md-4">
-                                <input id="lastname" ng-model="user.lastname" name="lastname" placeholder="" class="form-control input-md" required="" type="text">
+                                <input id="lastName" ng-model="user.lastName" ng-maxlength="15" name="lastName" placeholder="" class="form-control input-md" required="" type="text">
 
                             </div>
                         </div>
@@ -44,7 +44,7 @@
                         <div class="form-group">
                             <label class="col-md-4 control-label" for="email">E-Mail:</label>
                             <div class="col-md-4">
-                                <input id="email" ng-model="user.email" name="email" placeholder="" class="form-control input-md" required="" type="text">
+                                <input type="email" id="eMail" ng-model="user.eMail" typeng-maxlength="45" name="eMail" placeholder="" class="form-control input-md" required="" type="text">
 
                             </div>
                         </div>
@@ -53,7 +53,7 @@
                         <div class="form-group">
                             <label class="col-md-4 control-label" for="password1">Passwort:</label>
                             <div class="col-md-4">
-                                <input id="password1" ng-model="user.password" name="password" placeholder="" class="form-control input-md" required="" type="password">
+                                <input id="password" ng-model="user.password" ng-maxlength="15" name="password" placeholder="" class="form-control input-md" required="" type="password">
                             </div>
                         </div>
 
@@ -69,7 +69,30 @@
                     </form>
                 </div>
                 <div class="step" ng-switch-when="A">
-                    <div>Hier kommt eine Tabelle</div>
+                    <table class="table">
+                        <thead>
+                            <th>Userid</th>
+                            <th>Username</th>
+                            <th>Vorname</th>
+                            <th>Nachname</th>
+                            <th>E-Mail</th>
+                            <th></th>
+                            <th></th>
+                        </thead>
+                        <tbody>
+                            <tr ng-repeat="output in userList">
+                                    <td>{{output.userId}}</td>
+                                    <td>{{output.userName}}</td>
+                                    <td>{{output.name}}</td>
+                                    <td>{{output.lastName}}</td>
+                                    <td>{{output.eMail}}</td>
+                                    <td>
+                                        <button type = "button" ng-click="deleteUser(output)" class="btn btn-default">löschen</button>
+                                        <button type = "button" ng-click="" class="btn btn-default">edit</button>
+                                    </td>
+                                </tr>
+                        </tbody>
+                    </table>
                 </div>
             </div>
         </div>
