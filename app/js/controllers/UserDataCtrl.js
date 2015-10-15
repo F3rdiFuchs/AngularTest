@@ -1,30 +1,14 @@
-app.controller('UserTabCtrl', ['$scope','$resource', function($scope, $resource){
-    var UserRes = $resource('/ferdiRest/user');
-    $scope.userSite = "A";
-    $scope.setUserSite = function(state) {
-        this.userSite = state;
-    }
-    $scope.saveUser = function(user) {
-        UserRes.save({
-                userName: $scope.user.userName,
-                name: $scope.user.name,
-                lastName: $scope.user.lastName,
-                eMail: $scope.user.eMail,
-                password: $scope.user.password
-            }
-            , function(response){
-                $scope.message = response.message;
-            });
-        $scope.user.userName = '';
-        $scope.user.name = '';
-        $scope.user.lastName = '';
-        $scope.user.eMail = '';
-        $scope.user.password = '';
-    }
+app.controller('UserDataCtrl', function($scope,UserService) {
+    $scope.userList = UserService.query();
 
-    $scope.userList = UserRes.query();
+    $scope.saveUser = function () {
+        $scope.userList = UserService.save($scope.user);
+    }
 
     $scope.deleteUser = function(user) {
-        UserRes.delete(user);
+        UserService.delete({userId: user.userId}, function() {
+            $scope.userList = UserService.query();
+        });
+
     }
-}]);
+})

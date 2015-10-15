@@ -1,0 +1,27 @@
+<h2>Userlist:</h2>
+<div ng-controller="UserDataCtrl">
+    <table class="table">
+        <thead>
+            <th>Userid</th>
+            <th>Username</th>
+            <th>Vorname</th>
+            <th>Nachname</th>
+            <th>E-Mail</th>
+            <th></th>
+            <th></th>
+        </thead>
+        <tbody>
+            <tr ng-repeat="output in userList">
+                <td>{{output.userId}}</td>
+                <td>{{output.userName}}</td>
+                <td>{{output.name}}</td>
+                <td>{{output.lastName}}</td>
+                <td>{{output.eMail}}</td>
+                <td>
+                    <button type = "button" ng-click="deleteUser(output)" class="btn btn-default">löschen</button>
+                    <button type = "button" ng-click="" class="btn btn-default">edit</button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
