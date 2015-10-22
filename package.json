@@ -1,0 +1,29 @@
+{
+  "name": "test",
+  "version": "1.0.0",
+  "description": "",
+  "main": "gulpfile.js",
+  "dependencies": {
+    "gulp": "^3.9.0",
+    "bower": "^1.6.3",
+    "gulp-include-source": "^0.0.5"
+  },
+  "devDependencies": {
+    "gulp": "^3.9.0",
+    "gulp-include-source": "0.0.5",
+    "gulp-inject": "^3.0.0"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/F3rdiFuchs/AngularTest.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/F3rdiFuchs/AngularTest/issues"
+  },
+  "homepage": "https://github.com/F3rdiFuchs/AngularTest#readme"
+}

@@ -2,10 +2,13 @@
 <head>
     <meta charset="utf8" />
     <title>There is none...</title>
-    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/angularjs-toaster/0.4.15/toaster.min.css" rel="stylesheet" />
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    <!-- inject:css -->
+    <link rel="stylesheet" href="/app/css/main.css">
+    <link rel="stylesheet" href="/bower_components/angular/angular-csp.css">
+    <link rel="stylesheet" href="/bower_components/html5-boilerplate/dist/css/main.css">
+    <link rel="stylesheet" href="/bower_components/html5-boilerplate/dist/css/normalize.css">
+    <link rel="stylesheet" href="/bower_components/html5-boilerplate/src/css/main.css">
+    <!-- endinject -->
     <link href="css/main.css" rel="stylesheet" />
 </head>
 <body>
@@ -31,33 +34,96 @@
 <div class="container">
     <div ui-view></div>
 </div>
+<!-- inject:js -->
 
-<!-- Angular -->
-<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.7/angular.js"></script>
-<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.7/angular-route.js"></script>
-<script src="https://code.angularjs.org/1.4.7/angular-animate.min.js" ></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.7/angular-resource.min.js"></script>
-<script src="js/library/angular-ui-router.js" type="text/javascript"></script>
-<!-- Modules -->
-<script src="js/app.js"></script>
-<!-- Controllers -->
-<script src="js/controllers/HomeCtrl.js"></script>
-<script src="js/controllers/WeatherCtrl.js"></script>
-<script src="js/controllers/DataCtrl.js"></script>
-<script src="js/controllers/FormularCtrl.js"></script>
-<script src="js/controllers/UserDataCtrl.js"></script>
-<script src="js/controllers/UserTabCtrl.js"></script>
-<script src="js/controllers/UebungCtrl.js"></script>
-<script src="js/controllers/PromiseCtrl.js"></script>
-<!-- Services -->
-<script src="js/services/WeatherService.js"></script>
-<script src="js/services/UserService.js"></script>>
-<script src="js/services/testSrvice.js"></script>>
-<!-- Directives -->
-<script src="js/directives/downloadBnt.js"></script>
-<script src="js/directives/fileInfo.js"></script>
-<script src="js/directives/passwordVerify.js"></script>
-<!-- Toaster -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/angularjs-toaster/0.4.15/toaster.min.js"></script>
+<script src="/app/js/app.js"></script>
+
+<script src="/app/js/uebung.js"></script>
+
+<script src="/app/js/controllers/DataCtrl.js"></script>
+
+<script src="/app/js/controllers/FormularCtrl.js"></script>
+
+<script src="/app/js/controllers/HomeCtrl.js"></script>
+
+<script src="/app/js/controllers/PromiseCtrl.js"></script>
+
+<script src="/app/js/controllers/UebungCtrl.js"></script>
+
+<script src="/app/js/controllers/UserDataCtrl.js"></script>
+
+<script src="/app/js/controllers/UserTabCtrl.js"></script>
+
+<script src="/app/js/controllers/WeatherCtrl.js"></script>
+
+<script src="/app/js/directives/downloadBnt.js"></script>
+
+<script src="/app/js/directives/fileInfo.js"></script>
+
+<script src="/app/js/directives/passwordVerify.js"></script>
+
+<script src="/app/js/library/angular-ui-router.js"></script>
+
+<script src="/app/js/services/testSrvice.js"></script>
+
+<script src="/app/js/services/UserService.js"></script>
+
+<script src="/app/js/services/WeatherService.js"></script>
+
+<script src="/bower_components/angular-formly/dist/formly.js"></script>
+
+<script src="/bower_components/angular-formly/dist/formly.min.js"></script>
+
+<script src="/bower_components/api-check/dist/api-check.js"></script>
+
+<script src="/bower_components/api-check/dist/api-check.min.js"></script>
+
+<script src="/bower_components/html5-boilerplate/test/file_content.js"></script>
+
+<script src="/bower_components/html5-boilerplate/test/file_existence.js"></script>
+
+<script src="/bower_components/html5-boilerplate/dist/js/main.js"></script>
+
+<script src="/bower_components/html5-boilerplate/dist/js/plugins.js"></script>
+
+<script src="/bower_components/html5-boilerplate/src/js/main.js"></script>
+
+<script src="/bower_components/html5-boilerplate/src/js/plugins.js"></script>
+
+<script src="/bower_components/html5-boilerplate/dist/js/vendor/jquery-1.11.3.min.js"></script>
+
+<script src="/bower_components/html5-boilerplate/dist/js/vendor/modernizr-2.8.3.min.js"></script>
+
+<script src="/bower_components/html5-boilerplate/src/js/vendor/modernizr-2.8.3.min.js"></script>
+
+<script src="/bower_components/angular/angular.js"></script>
+
+<script src="/bower_components/angular/angular.min.js"></script>
+
+<script src="/bower_components/angular/index.js"></script>
+
+<script src="/bower_components/angular-loader/angular-loader.js"></script>
+
+<script src="/bower_components/angular-loader/angular-loader.min.js"></script>
+
+<script src="/bower_components/angular-mocks/angular-mocks.js"></script>
+
+<script src="/bower_components/angular-mocks/ngAnimateMock.js"></script>
+
+<script src="/bower_components/angular-mocks/ngMock.js"></script>
+
+<script src="/bower_components/angular-mocks/ngMockE2E.js"></script>
+
+<script src="/bower_components/angular-route/angular-route.js"></script>
+
+<script src="/bower_components/angular-route/angular-route.min.js"></script>
+
+<script src="/bower_components/angular-route/index.js"></script>
+
+<script src="/bower_components/api-check/karma.conf.js"></script>
+
+<script src="/bower_components/html5-boilerplate/gulpfile.js"></script>
+
+<!-- endinject -->
 </body>
 </html>
