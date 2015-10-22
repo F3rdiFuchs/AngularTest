@@ -1,5 +1,19 @@
 <h2>Userlist:</h2>
 <div ng-controller="UserDataCtrl">
+    <form class="form-horizontal">
+        <fieldset>
+            <div class="form-group">
+                <label class="col-md-4 control-label" for="selectbasic">max. items</label>
+                <div class="col-md-4">
+                    <select ng-model = "itemselect" ng-change = "selectAction()" id = "selectbasic" name = "selectbasic" class = "form-control">
+                        <option value="25" selected>25</option>
+                        <option value="50">50</option>
+                        <option value="100">100</option>
+                    </select>
+                </div>
+            </div>
+        </fieldset>
+</form>
     <table class="table">
         <thead>
             <th>Userid</th>
@@ -18,10 +32,27 @@
                 <td>{{output.lastName}}</td>
                 <td>{{output.eMail}}</td>
                 <td>
-                    <button type = "button" ng-click="deleteUser(output)" class="btn btn-default">löschen</button>
-                    <button type = "button" ng-click="" class="btn btn-default">edit</button>
+                    <button type = "button" ng-click = "deleteUser(output)" class="btn btn-default">löschen</button>
+                    <button type = "button" ng-click = "editUser(output)" class="btn btn-default">edit</button>
                 </td>
             </tr>
         </tbody>
     </table>
+    <ul class="pagination">
+
+        <li><a href="#">&laquo;</a></li>
+
+        <li><a href="#">1</a></li>
+
+        <li><a href="#">2</a></li>
+
+        <li><a href="#">3</a></li>
+
+        <li><a href="#">4</a></li>
+
+        <li><a href="#">5</a></li>
+
+        <li><a href="#">&raquo;</a></li>
+
+    </ul>
 </div>

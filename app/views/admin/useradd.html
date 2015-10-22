@@ -1,13 +1,16 @@
 <h2>Add user:</h2>
-<form class="form-horizontal" ng-controller="UserDataCtrl" ng-submit="saveUser()">
+<form class="form-horizontal" ng-controller="UserDataCtrl" ng-submit="doSome()" name="form" id="form">
     <fieldset>
 
         <!-- Text input-->
         <div class="form-group">
             <label class="col-md-4 control-label" for="username">Username:</label>
             <div class="col-md-4">
-                <input id="userName" ng-model="user.userName" ng-maxlength="15" name="username" placeholder="" class="form-control input-md" required="" type="text">
+                <input id="userName" ng-model="user.userName" ng-minlength="4" ng-maxlength="15" name="username" placeholder="" class="form-control input-md" required="" type="text">
 
+            </div>
+            <div ng-show="form.username.$dirty && form.username.$invalid" style="color:red">
+                <h5>Benutzername nicht erlaubt</h5>
             </div>
         </div>
 
@@ -15,8 +18,11 @@
         <div class="form-group">
             <label class="col-md-4 control-label" for="name">Vorname:</label>
             <div class="col-md-4">
-                <input id="name" ng-model="user.name" ng-maxlength="15" name="name" placeholder="" class="form-control input-md" required="" type="text">
+                <input type="text" id="name" ng-model="user.name" ng-maxlength="15" name="name" placeholder="" class="form-control input-md" required="" type="text">
 
+            </div>
+            <div ng-show="form.name.$dirty && form.name.$invalid" style="color:red">
+                <h5>Vorname nicht erlaubt</h5>
             </div>
         </div>
 
@@ -24,8 +30,10 @@
         <div class="form-group">
             <label class="col-md-4 control-label" for="lastname">Nachname:</label>
             <div class="col-md-4">
-                <input id="lastName" ng-model="user.lastName" ng-maxlength="15" name="lastName" placeholder="" class="form-control input-md" required="" type="text">
-
+                <input type="text" id="lastName" ng-model="user.lastName" ng-maxlength="15" name="lastName" placeholder="" class="form-control input-md" required="" type="text">
+            </div>
+            <div ng-show="form.lastName.$dirty && form.lastName.$invalid" style="color:red">
+                <h5>Das ist doch kein Nachname...</h5>
             </div>
         </div>
 
@@ -34,7 +42,9 @@
             <label class="col-md-4 control-label" for="email">E-Mail:</label>
             <div class="col-md-4">
                 <input type="email" id="eMail" ng-model="user.eMail" typeng-maxlength="45" name="eMail" placeholder="" class="form-control input-md" required="" type="text">
-
+            </div>
+            <div ng-show="form.eMail.$dirty && form.eMail.$invalid" style="color:red">
+                <h5>Bitte geben Sie eine g&uuml;ltige Mailadresse an!</h5>
             </div>
         </div>
 
@@ -44,6 +54,16 @@
             <div class="col-md-4">
                 <input id="password" ng-model="user.password" ng-maxlength="15" name="password" placeholder="" class="form-control input-md" required="" type="password">
             </div>
+
+        </div>
+
+        <!-- Password validation-->
+        <div class="form-group">
+            <label class="col-md-4 control-label" for="password">Passwort wiederholen:</label>
+            <div class="col-md-4">
+                <input id="vpassword" ng-model="user.vpassword" ng-maxlength="15" name="password" placeholder="" class="form-control input-md" required="" type="password">
+            </div>
+
         </div>
 
         <!-- Button -->
@@ -56,3 +76,4 @@
 
     </fieldset>
 </form>
+<toaster-container></toaster-container>
