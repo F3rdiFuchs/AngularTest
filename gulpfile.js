@@ -4,18 +4,19 @@ gulp.task('default', function() {
     // place code for your default task here
 });
 
+/*
+Insert all scripts into index.html
+*/
 gulp.task('updateIndex', function() {
-    var target = gulp.src('./app/index.html');
-    var sources = gulp.src([
+    gulp.src('./app/index.html')
+        .pipe(inject(gulp.src([
         './app/js/**/*.js',
-            './app/css/**/*.css',
-            './app/',
-            './bower_components/**/*.js',
-            './bower_components/**/*.css'
-        ],
-        {read:false})
-
-    return target.pipe(inject(sources))
+        './app/css/**/*.css',
+        './app/',
+        './bower_components/**/*.js',
+        './bower_components/**/*.css'
+    ],
+            {read: false}),
+            {relative: true}))
         .pipe(gulp.dest('./app'))
-
 });

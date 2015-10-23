@@ -22,11 +22,11 @@
   ],
   "ignore": [
     "**/.*",
-    "node_modules",
-    "bower_components",
-    "app/bower_components",
-    "test",
-    "tests"
+    "/src/node_modules",
+    "/src/bower_components",
+    "/src/app/bower_components",
+    "/src/test",
+    "/src/tests"
   ],
   "private": true
 
